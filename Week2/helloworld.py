@@ -1,0 +1,7 @@
+user_input1 = input("Can I get a name?")
+user_input2 = input("City Name?")
+user_input3 = input("Can I get an adjective?")
+user_input4 = input("Noun?")
+user_input5 = input("Can I get a verb ending in -ing?")
+user_input6 = input("How long(time length)?")
+print(user_input1 + " walked down Fourth Avenue in " + user_input2 + " when a(n) " + user_input3 + " " + user_input4 + " fell onto the sidewalk. " + user_input1 + " continued to pull out a magnnifying glass to inspect it. Someone who came " + user_input5 + " by stopped to take a look at the " + user_input4 + " too. After " + user_input6 + ", the two finally concluded that the object on the sidewalk was just a normal " + user_input4 + ".")
