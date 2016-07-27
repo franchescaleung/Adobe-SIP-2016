@@ -19,12 +19,20 @@ GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 BLUE = (0, 0, 255)
 GREY = (127, 127, 127)
-
-
+SEA_GREEN= (13, 255, 112)
+SKY_BLUE= (12, 218, 255)
+LEPRECHAUN= (73, 220, 75)
+FOAM_GREEN= (12, 232, 133)
+ORANGE= (255, 80, 13)
+YELLOW= (255, 244, 25)
+MAGENTA= (255, 25, 113)
+PURPLE= (95, 25, 113)
 
 pygame.init()
 
 # Set the width and height of the screen [width, height]
+#**size= (700, 500)
+#**screen= pygame.display.set_mode(size)
 SCREEN_WIDTH = 700
 SCREEN_HEIGHT = 500
 
@@ -48,6 +56,13 @@ clock = pygame.time.Clock()
 
 
 # -------- Main Program Loop -----------
+x=350
+y=250
+x_speed=random.randint(-10,10)
+y_speed= random.randint(-10, 10)
+size=random.randint(20,80)
+colors= [BLACK, WHITE, GREEN, RED, BLUE, GREY, SEA_GREEN, SKY_BLUE, LEPRECHAUN, FOAM_GREEN, ORANGE, YELLOW, MAGENTA, PURPLE]
+color= random.choice(colors)
 while not done:
     # --- Main event loop
     for event in pygame.event.get():
@@ -57,7 +72,7 @@ while not done:
 
 
     # --- Game logic should go here
-
+#**put in score, lives here
     # --- Screen-clearing code goes here
 
     # Here, we clear the screen to white. Don't put other drawing commands
@@ -65,10 +80,25 @@ while not done:
 
     # If you want a background image, replace this clear with blit'ing the
     # background image.
-    screen.fill(WHITE)
+    screen.fill(color)
+    #**then redraw what is going on
 
     # --- Drawing code should go here
-
+    color= random.choice(colors)
+    pygame.draw.circle(screen, color, [x, y], size)
+    x+=x_speed
+    y+=y_speed
+    if (y >=500): 
+        y_speed = -2
+    elif y<=0 :
+        y_speed = 2
+    if (x >=700):
+        x_speed= -2
+    elif x<=0:
+        x_speed= 2
+        
+        
+    #**anything that changes position of object would go here
 
 
     # --- Go ahead and update the screen with what we've drawn.
