@@ -2,6 +2,7 @@ window.onload=function(){
  alert("Explore my world!");
 }
 
+
 // window.onload=function(){
 //     document.addEventListener('click', changePhoto);
 //  document.addEventListener('load', function(){
