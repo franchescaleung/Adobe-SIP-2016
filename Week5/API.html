@@ -17,9 +17,9 @@
       function initMap() {
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
-            center: {lat: 37.771206, lng: -122.401662},
-            zoom: 17,
-            // mapTypeId: google.maps.mapTypeId.HYBIRD
+            center: {lat: 37.769, lng: -122.447},
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.HYBIRD
       });
 
         var image = {
@@ -30,7 +30,28 @@
     // The origin for this image is (0, 0).
     origin: new google.maps.Point(0, 0),
     // The anchor for this image is the base of the flagpole at (0, 32).
+  
+  };  
+var image3 = {
+    url: 'http://www.fillmorestreetsf.com/wp-content/blogs.dir/191/files/2011/11/WoodhouseFishCo.jpg',
+    scaledSize: new google.maps.Size(50, 50),
+    origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(0, 32)
+
+  };
+  var image2 = {
+    url: 'https://pbs.twimg.com/profile_images/635884247572574208/9lCRUX_o.png',
+    scaledSize: new google.maps.Size(50, 50),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(0, 32)
+
+  };
+  var image4 = {
+    url: 'http://www.amazingfusiondrinks.com/boba.png',
+    scaledSize: new google.maps.Size(50, 50),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(0, 32)
+
   };
         var marker = new google.maps.Marker({
           position: {lat: 37.771, lng: -122.401662},
@@ -38,14 +59,59 @@
           Title: 'Adobe SF',
           icon: image
         });
+        var marker2 = new google.maps.Marker({
+          position: {lat: 37.748143, lng: -122.496714},
+          map: map,
+          icon: image2
+
+        });
+
+
+        var marker3 = new google.maps.Marker({
+          position: {lat: 37.7875, lng: -122.433065},
+          map: map,
+          Title: 'Woodhouse',
+          icon: image3
+
+        });
+
+        var marker4 = new google.maps.Marker({
+          position: {lat: 37.7805, lng: -122.477},
+          map: map,
+          Title: 'boba',
+          icon: image4
+
+        });
 
         var infowindow = new google.maps.InfoWindow({
   content:"Adobe SF: My Girls Who Code Summer Program home!"
   });
 
+         var infowindow4 = new google.maps.InfoWindow({
+  content:"My favorite boba place!"
+  });
+        var infowindow1 = new google.maps.InfoWindow({
+          content: "Saint Ignatius College Preaparatory"
+        });
+        marker2.addListener('click', function(){
+          infowindow1.open(map, marker2);
+        });
+         var infowindow3 = new google.maps.InfoWindow({
+          content: "Woodhouse Fish Co."
+        });
+
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
+  marker3.addListener('click', function() {
+          infowindow3.open(map, marker3);
+        });
+  marker4.addListener('click', function() {
+          infowindow4.open(map, marker4);
+        });
+
+
+
 }
 
 
