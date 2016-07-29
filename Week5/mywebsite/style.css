@@ -9,13 +9,37 @@ h2{color:#14C3A2; font-size:32px;
     padding-left: 0px;}
 p{color:#C0ADDB; }
 h3{color: #7CF49A; font-size: 24px; padding-top: 20px}
+h4{color:#78AB46; font-size: 24px;}
 
 .div{list-style: none}
 .languages{
-
+    list-style-type: none;
     display: inline-block;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: none;
+
+   
+}
+
+.dot{
+
+  text-align:center
+}
+
+.python{
+  width: 100%;
+  height: 100%;
+}
+
+.scratch {
+
+width: 10%;
+height: 10%;
+
+}
+.C{
+
+  width: 10%;
+  height: 10%;
 }
 .project{
     width: 800px;
@@ -30,17 +54,24 @@ h3{color: #7CF49A; font-size: 24px; padding-top: 20px}
 }
 
 .navigator{
-    background-color: #79E86D;
+  
     display: inline-block;
-    width: 100px;
-    margin-right: 30px;
-    margin-left: 0px;
+    width: 130px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 20px;
 
 
 
 
 }
-ul{font-size: 20px}
+
+
+
+
+h5{font-size: 18px;}
+
+ul{font-size: 22px}
 /*.pics{padding-right: 200px;
 padding-left: 350px;
 margin-left: 100px;
@@ -70,7 +101,7 @@ div.projectimages img:hover { height: auto; width: auto; }
   top: 0;
   top: 50%;
   width: auto;
-  margin-top: 3300px;
+  margin-top: 3450px;
   padding: 16px;
   color: black;
   font-weight: bold;
@@ -93,6 +124,8 @@ div.projectimages img:hover { height: auto; width: auto; }
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }*/
+
+
 
 .prev2{
   left: 470px;
@@ -134,6 +167,10 @@ div.projectimages img:hover { height: auto; width: auto; }
   position: absolute;
   top: 0;
 }
+.button {
+    
+    width: 5%;
+}
 
 /* The dots/bullets/indicators */
 .dot {
@@ -168,3 +205,19 @@ div.projectimages img:hover { height: auto; width: auto; }
   from {opacity: .4} 
   to {opacity: 1}
 }
+
+.social {
+  float: left;
+  list-style-type: none;
+     margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+  }
+.social a{ 
+  bottom: 0;
+  width: ;
+  background-color: #666;
+
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 37.771206, lng: -122.401662},
+            zoom: 17,
+            // mapTypeId: google.maps.mapTypeId.HYBIRD
+      });
+
+        var image = {
+    url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Adobe_Systems_logo_and_wordmark.svg/2000px-Adobe_Systems_logo_and_wordmark.svg.png',
+     scaledSize: new google.maps.Size(50, 50), // scaled size
+     // This marker is 20 pixels wide by 32 pixels high.
+  
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(0, 32)
+  };
+        var marker = new google.maps.Marker({
+          position: {lat: 37.771, lng: -122.401662},
+          map: map,
+          Title: 'Adobe SF',
+          icon: image
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+  content:"Adobe SF: My Girls Who Code Summer Program home!"
+  });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+}
+
+
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSlCQ_52SW04SyqadLTDx0wJ0TtXX-xC0&callback=initMap">
+    </script>
+  </body>
+</html>
+  </body>
+</html>
